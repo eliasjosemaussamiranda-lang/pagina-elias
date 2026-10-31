@@ -2,6 +2,14 @@ const menuButton = document.querySelector(".menu-toggle");
 const siteMenu = document.querySelector("#site-menu");
 const brand = document.querySelector(".brand");
 let closeMenuTimer;
+const gameLink = document.createElement("a");
+
+gameLink.href = window.location.pathname.includes("/pro/html/")
+  ? "../../juego/index.html"
+  : "../juego/index.html";
+gameLink.textContent = "🎮 Shadow Maze";
+gameLink.dataset.menuLink = "";
+siteMenu.append(gameLink);
 
 const brandStyles = [
   { family: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" },
