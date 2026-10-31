@@ -1,0 +1,27 @@
+:root {
+  --bg: #1f2723;
+  --panel: #2c3633;
+  --panel-soft: #f0f5f1;
+  --text: #ecf3ee;
+  --muted: #c9d5ce;
+  --accent: #7fe7b6;
+  --accent-strong: #3ecb8a;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #2d3a36 52%, #1a211d);
+  color: var(--text);
+  line-height: 1.6;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../imagenes/martillo-logo.png" />
+    <title>Etiquetas en HTML | Portafolio de Elias</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand-group">
+          <button class="brand" type="button" aria-label="Cambiar la fuente de Elias" title="Haz clic para cambiar la fuente">Elias</button>
+          <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <span class="page-indicator" aria-label="Página actual: Etiquetas en HTML">Etiquetas en HTML</span>
+        <a class="home-link" href="pro.html">Inicio</a>
+      </div>
+    </header>
+    <nav class="sidebar" id="site-menu" aria-label="Páginas del sitio" hidden>
+      <a href="conceptos.html" data-menu-link>Primeros pasos</a>
+      <a href="etiquetas.html" data-menu-link aria-current="page">Etiquetas en HTML</a>
+      <a href="etiquetas-css.html" data-menu-link>Etiquetas en CSS</a>
+      <a href="etiquetas-js.html" data-menu-link>Etiquetas en JavaScript</a>
+      <a href="errores.html" data-menu-link>Errores comunes</a>
+      <a href="practicas.html" data-menu-link>Prácticas</a>
+      <a href="siguiente.html" data-menu-link>Siguiente nivel</a>
+    </nav>
+    <main class="container">
+      <section class="section-card">
+        <h1>Etiquetas en HTML</h1>
+        <p class="lead">Las etiquetas organizan el contenido y le indican al navegador qué significa cada parte. Cada tarjeta explica un grupo de etiquetas y muestra un ejemplo pequeño que puedes adaptar a tu propio sitio.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>La estructura de un documento</h2>
+        <p>Todo archivo HTML empieza con una estructura básica. <code>&lt;!DOCTYPE html&gt;</code> indica que usamos HTML moderno; <code>&lt;html&gt;</code> contiene la página; <code>&lt;head&gt;</code> guarda información que normalmente no se ve dentro de la página; y <code>&lt;body&gt;</code> contiene el contenido visible.</p>
+        <p>El elemento <code>&lt;title&gt;</code> va dentro de <code>&lt;head&gt;</code> y define el texto de la pestaña del navegador. El atributo <code>lang="es"</code> indica que el idioma principal es español.</p>
+        <div class="example"><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi receta favorita&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Panqueques&lt;/h1&gt;
+  &lt;p&gt;Una receta fácil para compartir.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+      </section>
+
+      <section class="section-card">
+        <h2>Títulos</h2>
+        <p>Los encabezados organizan el contenido por temas. <code>&lt;h1&gt;</code> es el título principal de la página; usa <code>&lt;h2&gt;</code> para las secciones y <code>&lt;h3&gt;</code> para apartados dentro de una sección. Mantén el orden para que la página sea fácil de recorrer y entender.</p>
+        <div class="example"><pre><code>&lt;h1&gt;Mi huerta en casa&lt;/h1&gt;
+&lt;h2&gt;Cómo plantar tomates&lt;/h2&gt;
+&lt;h3&gt;Materiales necesarios&lt;/h3&gt;</code></pre></div>
+        <p>En este ejemplo, «Cómo plantar tomates» es una sección del tema «Mi huerta en casa», y «Materiales necesarios» pertenece a esa sección.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Párrafos y saltos de línea</h2>
+        <p>Usa <code>&lt;p&gt;</code> para separar ideas en párrafos. La etiqueta <code>&lt;br&gt;</code> crea un salto de línea dentro del mismo párrafo; resérvala para casos como una dirección o un poema, no para separar párrafos ni crear espacio de diseño.</p>
+        <div class="example"><pre><code>&lt;p&gt;La biblioteca abre a las nueve.&lt;/p&gt;
+&lt;p&gt;Recuerda devolver los libros a tiempo.&lt;/p&gt;
+
+&lt;p&gt;Calle Central 25&lt;br&gt;Bogotá&lt;/p&gt;</code></pre></div>
+        <p>Los dos primeros mensajes son ideas separadas, por eso tienen su propio <code>&lt;p&gt;</code>. La dirección usa <code>&lt;br&gt;</code> para continuar en la línea siguiente sin empezar otro párrafo.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Enlaces</h2>
+        <p>La etiqueta <code>&lt;a&gt;</code> crea un enlace y su atributo <code>href</code> indica el destino. El texto entre la etiqueta de apertura y la de cierre debe explicar adónde lleva el enlace.</p>
+        <div class="example"><pre><code>&lt;a href="https://www.bibliotecanacional.gov.co/"&gt;
+  Visita la Biblioteca Nacional
+&lt;/a&gt;</code></pre></div>
+        <p>También puedes enlazar a otra página de tu proyecto, por ejemplo <code>&lt;a href="contacto.html"&gt;Contáctanos&lt;/a&gt;</code>. Comprueba que la dirección del atributo <code>href</code> sea correcta.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Imágenes</h2>
+        <p>La etiqueta <code>&lt;img&gt;</code> muestra una imagen. El atributo <code>src</code> indica el nombre o la ruta del archivo, y <code>alt</code> ofrece una descripción útil si la imagen no carga o si una persona usa un lector de pantalla. <code>&lt;img&gt;</code> no necesita una etiqueta de cierre.</p>
+        <div class="example"><pre><code>&lt;img src="imagenes/huerta.jpg"
+     alt="Tomates maduros creciendo en una huerta"&gt;</code></pre></div>
+        <p>Guarda la imagen en la carpeta indicada por <code>src</code> y escribe en <code>alt</code> lo que realmente aparece en ella, en vez de poner solo «foto».</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Listas</h2>
+        <p><code>&lt;ul&gt;</code> crea una lista con viñetas para elementos cuyo orden no importa. <code>&lt;ol&gt;</code> crea una lista numerada para pasos que sí deben seguirse en orden. Cada elemento de cualquiera de las listas se escribe con <code>&lt;li&gt;</code>.</p>
+        <div class="example"><pre><code>&lt;h3&gt;Ingredientes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;2 tomates&lt;/li&gt;
+  &lt;li&gt;1 cebolla&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Preparación&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lava los ingredientes.&lt;/li&gt;
+  &lt;li&gt;Córtalos en trozos.&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div>
+        <p>Usa una lista numerada para la preparación porque hay que seguir sus pasos en secuencia; los ingredientes pueden presentarse con viñetas.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Negrita y cursiva</h2>
+        <p><code>&lt;b&gt;</code> muestra el texto en negrita y <code>&lt;i&gt;</code> lo muestra en cursiva. Sirven para dar formato visual. Cuando quieras indicar que algo es importante, prefiere <code>&lt;strong&gt;</code>; para dar énfasis a una palabra o frase, usa <code>&lt;em&gt;</code>. Estas últimas etiquetas también comunican el significado del texto.</p>
+        <div class="example"><pre><code>&lt;p&gt;La función tiene un &lt;b&gt;botón rojo&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;El museo abre &lt;i&gt;solo los domingos&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Importante:&lt;/strong&gt; guarda tu trabajo.&lt;/p&gt;
+&lt;p&gt;Este paso es &lt;em&gt;muy sencillo&lt;/em&gt;.&lt;/p&gt;</code></pre></div>
+        <p>En el ejemplo, <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> cambian la presentación; <code>&lt;strong&gt;</code> marca una advertencia importante y <code>&lt;em&gt;</code> enfatiza «muy sencillo».</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Class e id</h2>
+        <p><code>class</code> y <code>id</code> son atributos que se escriben dentro de la etiqueta de apertura. Una misma clase se puede reutilizar para varios elementos; un <code>id</code> identifica un elemento particular de la página y debe ser único en ella.</p>
+        <div class="example"><pre><code>&lt;p class="aviso"&gt;La tienda cierra a las seis.&lt;/p&gt;
+&lt;p class="aviso"&gt;El sábado cierra a las cuatro.&lt;/p&gt;
+&lt;h2 id="horarios"&gt;Horarios de atención&lt;/h2&gt;</code></pre></div>
+        <p>En CSS, seleccionas la clase con un punto, como <code>.aviso</code>, y el id con el símbolo <code>#</code>, como <code>#horarios</code>. Usa una clase cuando varios elementos comparten un estilo y un id para señalar uno específico.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Atributos</h2>
+        <p>Los atributos agregan información o configuración a una etiqueta y se escriben en la etiqueta de apertura como <code>nombre="valor"</code>. Por ejemplo, en un enlace <code>href</code> guarda el destino; en una imagen <code>src</code> indica el archivo y <code>alt</code> describe la imagen. También existen <code>class</code> e <code>id</code>.</p>
+        <div class="example"><pre><code>&lt;a href="contacto.html" title="Ir a contacto"&gt;
+  Escríbenos
+&lt;/a&gt;
+
+&lt;img src="imagenes/equipo.jpg"
+     alt="El equipo reunido en la oficina"&gt;</code></pre></div>
+        <p>Los atributos de cada etiqueta pueden ser distintos. Escribe sus valores entre comillas y revisa que la ruta o el texto correspondan con el archivo o destino real.</p>
+      </section>
+
+      <section class="section-card">
+        <div class="cta-row cta-row--center">
+          <a class="btn secondary" href="errores.html">¿Tienes algún error?</a>
+          <a class="btn" href="etiquetas-css.html">Etiquetas en CSS</a>
+        </div>
+      </section>
+    </main>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

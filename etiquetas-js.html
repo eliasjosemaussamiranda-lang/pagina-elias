@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../imagenes/martillo-logo.png" />
+    <title>Etiquetas en JavaScript | Portafolio de Elias</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand-group">
+          <button class="brand" type="button" aria-label="Cambiar la fuente de Elias" title="Haz clic para cambiar la fuente">Elias</button>
+          <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <span class="page-indicator" aria-label="Página actual: Etiquetas en JavaScript">Etiquetas en JavaScript</span>
+        <a class="home-link" href="pro.html">Inicio</a>
+      </div>
+    </header>
+    <nav class="sidebar" id="site-menu" aria-label="Páginas del sitio" hidden>
+      <a href="conceptos.html" data-menu-link>Primeros pasos</a>
+      <a href="etiquetas.html" data-menu-link>Etiquetas en HTML</a>
+      <a href="etiquetas-css.html" data-menu-link>Etiquetas en CSS</a>
+      <a href="etiquetas-js.html" data-menu-link aria-current="page">Etiquetas en JavaScript</a>
+      <a href="errores.html" data-menu-link>Errores comunes</a>
+      <a href="practicas.html" data-menu-link>Prácticas</a>
+      <a href="siguiente.html" data-menu-link>Siguiente nivel</a>
+    </nav>
+    <main class="container">
+      <section class="section-card">
+        <h1>Etiquetas en JavaScript</h1>
+        <p class="lead">JavaScript añade acciones a una página: puede guardar información, tomar decisiones y responder a los clics. Aquí veremos instrucciones básicas con ejemplos que puedes probar.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Mostrar un mensaje</h2>
+        <p><code>console.log()</code> escribe un mensaje en la consola del navegador, útil para revisar qué está pasando en el programa. <code>alert()</code> muestra una ventana emergente; úsala en ejemplos pequeños y no para cada mensaje de la página.</p>
+        <div class="example"><pre><code>console.log("La página está lista");
+alert("¡Bienvenido a la receta!");</code></pre></div>
+        <p>Abre las herramientas de desarrollador del navegador y selecciona <strong>Consola</strong> para ver el primer mensaje.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Variables: guardar datos</h2>
+        <p><code>const</code> crea una variable cuyo valor no se volverá a asignar. <code>let</code> sirve cuando necesitas cambiar su valor. Los nombres deben explicar qué información guardan.</p>
+        <div class="example"><pre><code>const nombre = "Lucía";
+let puntos = 0;
+
+puntos = puntos + 1;
+console.log(nombre, puntos);</code></pre></div>
+        <p><code>nombre</code> conserva el texto «Lucía» y <code>puntos</code> cambia de <code>0</code> a <code>1</code>. Usa <code>const</code> por defecto y <code>let</code> cuando el valor tenga que cambiar.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Tipos de datos y operaciones</h2>
+        <p>Los textos van entre comillas, los números se escriben sin comillas y los valores <code>true</code> o <code>false</code> representan verdadero o falso. El signo <code>+</code> suma números y también puede unir textos.</p>
+        <div class="example"><pre><code>const precio = 5;
+const cantidad = 3;
+const total = precio * cantidad;
+const mensaje = "Total: $" + total;
+
+console.log(mensaje);</code></pre></div>
+        <p>El resultado muestra «Total: $15». Fíjate en que <code>precio</code> y <code>cantidad</code> son números, mientras que <code>mensaje</code> es un texto.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Tomar decisiones con <code>if</code></h2>
+        <p><code>if</code> ejecuta instrucciones solo cuando una condición es verdadera. Puedes usar <code>else</code> para indicar qué hacer cuando no lo es.</p>
+        <div class="example"><pre><code>const tieneEntrada = true;
+
+if (tieneEntrada) {
+  console.log("Puedes entrar");
+} else {
+  console.log("Necesitas una entrada");
+}</code></pre></div>
+        <p>Como <code>tieneEntrada</code> vale <code>true</code>, la consola muestra «Puedes entrar». Si lo cambias a <code>false</code>, muestra el otro mensaje.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Funciones: reutilizar instrucciones</h2>
+        <p>Una función agrupa instrucciones con un nombre para poder ejecutarlas cuando se necesiten. Los valores entre paréntesis son datos que la función recibe.</p>
+        <div class="example"><pre><code>function saludar(nombre) {
+  return "Hola, " + nombre;
+}
+
+console.log(saludar("Mateo"));</code></pre></div>
+        <p>Al llamar <code>saludar("Mateo")</code>, la función devuelve «Hola, Mateo». Puedes llamarla de nuevo con otro nombre sin repetir sus instrucciones.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Seleccionar un elemento de la página</h2>
+        <p><code>document.querySelector()</code> busca en el documento el primer elemento que coincida con el selector CSS. Usa <code>#</code> para buscar por <code>id</code> y <code>.</code> para buscar por <code>class</code>.</p>
+        <div class="example"><pre><code>&lt;p id="mensaje"&gt;Tu pedido está listo.&lt;/p&gt;</code></pre></div>
+        <div class="example"><pre><code>const mensaje = document.querySelector("#mensaje");
+console.log(mensaje.textContent);</code></pre></div>
+        <p>El selector <code>"#mensaje"</code> encuentra el párrafo y <code>textContent</code> permite leer su texto.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Responder a un clic</h2>
+        <p><code>addEventListener()</code> espera un evento, como un clic, y ejecuta una función cuando ocurre. Primero prepara el botón en HTML y luego conecta su comportamiento con JavaScript.</p>
+        <div class="example"><pre><code>&lt;button id="saludar"&gt;Saludar&lt;/button&gt;
+&lt;p id="respuesta"&gt;&lt;/p&gt;</code></pre></div>
+        <div class="example"><pre><code>const boton = document.querySelector("#saludar");
+const respuesta = document.querySelector("#respuesta");
+
+boton.addEventListener("click", () =&gt; {
+  respuesta.textContent = "¡Hola! Gracias por visitar.";
+});</code></pre></div>
+        <p>Al hacer clic, el programa cambia el texto del párrafo. Coloca el script después de esos elementos HTML o cárgalo con <code>defer</code> para que ya existan cuando JavaScript los busque.</p>
+      </section>
+
+      <section class="section-card">
+        <h2>Conectar JavaScript con HTML</h2>
+        <p>Guarda tu programa en un archivo terminado en <code>.js</code>, por ejemplo <code>script.js</code>. Para cargarlo, agrega una etiqueta <code>&lt;script&gt;</code> al final del <code>&lt;body&gt;</code>, después de los elementos con los que va a trabajar.</p>
+        <div class="example"><pre><code>&lt;body&gt;
+  &lt;button id="saludar"&gt;Saludar&lt;/button&gt;
+  &lt;p id="respuesta"&gt;&lt;/p&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre></div>
+        <p>El valor de <code>src</code> debe coincidir con el nombre y la ubicación del archivo JavaScript. Puedes abrir la consola del navegador para revisar los mensajes y errores.</p>
+      </section>
+
+      <section class="section-card">
+        <div class="cta-row cta-row--center">
+          <a class="btn secondary" href="errores.html">¿Tienes algún error?</a>
+          <a class="btn" href="practicas.html">Vamos a practicar</a>
+        </div>
+      </section>
+    </main>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../imagenes/martillo-logo.png" />
+    <title>inicio programacion</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand-group">
+          <button class="brand" type="button" aria-label="Cambiar la fuente de Elias" title="Haz clic para cambiar la fuente">Elias</button>
+          <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <span class="page-indicator" aria-label="Página actual: Inicio">Inicio</span>
+      </div>
+    </header>
+    <nav class="sidebar" id="site-menu" aria-label="Páginas del sitio" hidden>
+      <a href="conceptos.html" data-menu-link>Primeros pasos</a>
+      <a href="etiquetas.html" data-menu-link>Etiquetas en HTML</a>
+      <a href="etiquetas-css.html" data-menu-link>Etiquetas en CSS</a>
+      <a href="etiquetas-js.html" data-menu-link>Etiquetas en JavaScript</a>
+      <a href="errores.html" data-menu-link>Errores comunes</a>
+      <a href="practicas.html" data-menu-link>Prácticas</a>
+      <a href="siguiente.html" data-menu-link>Siguiente nivel</a>
+    </nav>
+
+    <main id="inicio" class="container">
+      <section class="hero">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <h1>¿Quieres aprender a crear páginas web <span class="highlight">desde cero?</span></h1>
+            <p class="lead">
+             quieres crear páginas web desde cero y no sabes por dónde empezar?</p> 
+            <p class="lead">
+              En esta página comenzaremos y aprenderemos paso a paso el como programar desde cero con
+              <b>Visual Studio Code</b>.
+            </p>
+            
+            <div class="cta-row">
+              <a class="btn" href="conceptos.html">Más información</a>
+              <a class="btn secondary" href="practicas.html">Ejercicios</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section-card download-section">
+        <h2>¿Dónde puedes conseguir Visual Studio Code?</h2>
+        <p>
+         <strong>Visual Studio Code (VS Code)</strong> es 
+          <strong>gratis.</strong>
+          Puedes descargarlo desde su
+          <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener noreferrer">página oficial de descarga</a>.
+          Está disponible para<b>: Windows</b>, <b>Linux</b> y <b>macOS</b>.
+        </p>
+        <p>
+          Usamos <strong>VS Code</strong> porque puede sugerir y completar código mientras trabajamos.
+        </p>
+      </section>
+
+      <section class="section-card">
+        <h2>¿qué vamos a usar?</h2>
+        <p>
+          En VS Code usamos lenguajes como <strong>HTML</strong>, <strong>CSS</strong> y
+          <strong>JavaScript</strong> para crear páginas web:
+        </p>
+        <div class="grid">
+          <article class="card card-html">
+            <h3>HTML</h3>
+            <p>La estructura y el contenido de la página, en otras palabras HTML es el cuerpo de la página.</p>
+          </article>
+          <article class="card card-css">
+            <h3>CSS</h3>
+            <p>La apariencia, los colores y la distribución, en otras palabras css es el estilo de la página.</p>
+          </article>
+          <article class="card card-javascript">
+            <h3>JavaScript</h3>
+            <p>El comportamiento y la interactividad, en otras palabras JavaScript son los músculos y los sentidos.</p>
+          </article>
+          <article class="card card-needs">
+            <h3>¿Qué necesitamos?</h3>
+            <p>Un computador, un navegador, VS Code y ganas de probar y equivocarnos.</p>
+          </article>
+        </div>
+        <p class="note">
+          Programar también es probar, encontrar errores y volver a intentarlo. Un error
+          no significa que seas malo: es una pista de lo que todavía podemos aprender.
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="cta-row cta-row--center">
+          <a class="btn" href="conceptos.html">Más información</a>
+        </div>
+      </section>
+
+    </main>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

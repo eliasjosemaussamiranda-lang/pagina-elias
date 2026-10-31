@@ -1,12 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=html/pro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio de Elias</title>
-  </head>
-  <body>
-    <p>Abriendo el <a href="html/pro.html">portafolio de Elias</a>...</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta name="theme-color" content="#10121b">
+
+    <title>Shadow Maze</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/overlays.css">
+</head>
+
+<body>
+
+    <main id="game">
+
+        <!-- INFORMACIÓN SUPERIOR -->
+        <header id="hud">
+
+            <div class="hud-title">
+                <h1>SHADOW MAZE</h1>
+                <p>Sobrevive en las sombras</p>
+            </div>
+
+            <div class="hud-stats">
+
+                <div class="stat">
+                    <span>❤️ VIDA</span>
+                    <strong id="hpText">100</strong>
+                </div>
+
+                <div class="stat">
+                    <span>👹 ENEMIGOS</span>
+                    <strong id="enemyText">6</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ÁREA PRINCIPAL DEL JUEGO -->
+        <section id="gameArea">
+
+            <canvas
+                id="gameCanvas"
+                width="450"
+                height="800"
+            ></canvas>
+
+            <!-- PANTALLA DE INICIO -->
+            <div id="startOverlay" class="overlay">
+
+                <div class="menu-box">
+
+                    <h2>SHADOW MAZE</h2>
+
+                    <p>
+                        La oscuridad te rodea.
+                        Sobrevive y derrota a tus enemigos.
+                    </p>
+
+                    <div class="instructions">
+                        <p>🕹️ Muévete con el joystick o WASD/flechas.</p>
+                        <p>⚡ Usa el dash para esquivar.</p>
+                        <p>⚔️ La espada ataca automáticamente a los enemigos cercanos.</p>
+                        <p>❄️ Ralentiza a los enemigos al 25% durante 10 segundos; recarga: 15 segundos.</p>
+                        <p>⌨️ PC: WASD/flechas; Espacio: dash, K: área, L: embestida, I: ralentizar.</p>
+                        <p>👹 Hay enemigos normales y rápidos; ambos hacen 5 de daño.</p>
+                    </div>
+
+                    <button id="startButton" type="button">
+                        JUGAR
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PANTALLA DE DERROTA -->
+            <div id="gameOverOverlay" class="overlay hidden">
+
+                <div class="menu-box">
+
+                    <h2>HAS CAÍDO</h2>
+
+                    <p>
+                        Las sombras te han vencido.
+                        ¿Quieres intentarlo otra vez?
+                    </p>
+
+                    <p>Puntuación: <strong id="finalScore">0</strong></p>
+                    <p>Oleada alcanzada: <strong id="finalWave">1</strong></p>
+
+                    <button id="restartButton" type="button">
+                        VOLVER A JUGAR
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTROLES INFERIORES -->
+        <footer id="controls">
+
+            <!-- JOYSTICK IZQUIERDO -->
+            <div id="movementArea">
+
+                <div id="joystick">
+                    <div id="joystickStick"></div>
+                </div>
+
+                <span class="control-label">MOVER</span>
+
+            </div>
+
+            <!-- BOTONES DE ATAQUE -->
+            <div id="actionArea">
+
+                <button
+                    id="dashButton"
+                    class="action-button dash"
+                    type="button"
+                >
+                    <span>⚡</span>
+                    <small>DASH</small>
+                </button>
+
+                <button
+                    id="areaButton"
+                    class="action-button area"
+                    type="button"
+                >
+                    <span>✴️</span>
+                    <small>ÁREA</small>
+                </button>
+
+                <button
+                    id="lungeButton"
+                    class="action-button lunge"
+                    type="button"
+                >
+                    <span>➤</span>
+                    <small>EMBESTIDA</small>
+                </button>
+
+                <button
+                    id="slowButton"
+                    class="action-button slow"
+                    type="button"
+                    aria-label="Ralentizar enemigos durante 10 segundos"
+                >
+                    <span>❄️</span>
+                    <small>RALENTIZAR</small>
+                </button>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!-- Cada módulo se carga en orden para permitir también abrir el juego con file:// -->
+    <script src="js/texture-loader.js"></script>
+    <script src="js/placeholder-map.js"></script>
+    <script src="js/map-system.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/behaviors.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/attacks.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
 </html>

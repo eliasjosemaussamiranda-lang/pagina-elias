@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../imagenes/martillo-logo.png" />
+    <title>Errores comunes | Aprende a programar</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container topbar">
+        <div class="brand-group">
+          <button class="brand" type="button" aria-label="Cambiar la fuente de Elias" title="Haz clic para cambiar la fuente">Elias</button>
+          <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <span class="page-indicator" aria-label="Página actual: Errores comunes">Errores comunes</span>
+        <a class="home-link" href="pro.html">Inicio</a>
+      </div>
+    </header>
+    <nav class="sidebar" id="site-menu" aria-label="Páginas del sitio" hidden>
+      <a href="conceptos.html" data-menu-link>Primeros pasos</a>
+      <a href="etiquetas.html" data-menu-link>Etiquetas en HTML</a>
+      <a href="etiquetas-css.html" data-menu-link>Etiquetas en CSS</a>
+      <a href="etiquetas-js.html" data-menu-link>Etiquetas en JavaScript</a>
+      <a href="errores.html" data-menu-link aria-current="page">Errores comunes</a>
+      <a href="practicas.html" data-menu-link>Prácticas</a>
+      <a href="siguiente.html" data-menu-link>Siguiente nivel</a>
+    </nav>
+    <main class="container">
+      <section class="section-card">
+        <h1>Errores comunes</h1>
+        <p class="lead">Los errores son parte normal de aprender. Vamos a revisar algunos comunes y cómo empezar a buscarlos.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Etiqueta sin cerrar</h3>
+            <p>Si abres un párrafo, recuerda cerrarlo.</p>
+            <div class="example"><pre><code>&lt;!-- Incorrecto --&gt;
+&lt;p&gt;Hola
+
+&lt;!-- Correcto --&gt;
+&lt;p&gt;Hola&lt;/p&gt;</code></pre></div>
+          </article>
+          <article class="card">
+            <h3>Nombre mal escrito</h3>
+            <p>Una letra de más puede hacer que el navegador no reconozca una etiqueta.</p>
+            <div class="example"><pre><code>&lt;!-- Incorrecto --&gt;
+&lt;titlle&gt;Hola&lt;/titlle&gt;
+
+&lt;!-- Correcto --&gt;
+&lt;title&gt;Hola&lt;/title&gt;</code></pre></div>
+          </article>
+          <article class="card">
+            <h3>Confundir class e id</h3>
+            <p>En CSS una clase comienza con punto y un id con numeral. En HTML se escriben sin esos símbolos.</p>
+            <div class="example"><pre><code>&lt;p class="importante"&gt;Grupo&lt;/p&gt;
+&lt;h1 id="titulo"&gt;Único&lt;/h1&gt;</code></pre></div>
+          </article>
+          <article class="card">
+            <h3>Ruta de imagen incorrecta</h3>
+            <p>Comprueba que el nombre del archivo y su ubicación coincidan con el valor de <code>src</code>.</p>
+            <div class="example"><pre><code>&lt;img src="foto.jpg"
+     alt="Mi foto"&gt;</code></pre></div>
+          </article>
+          <article class="card">
+            <h3>Problemas con CSS</h3>
+            <p>Revisa que el nombre de la hoja de estilos esté bien escrito y que su ruta en el enlace <code>&lt;link&gt;</code> sea correcta.</p>
+            <div class="example"><pre><code>&lt;link rel="stylesheet"
+                  href="../css/base.css"&gt;</code></pre></div>
+          </article>
+        </div>
+        <div class="lesson">
+          <h2>¿Cómo saber qué está pasando?</h2>
+          <p>Cuando algo no funciona, no tenemos que adivinar. Las herramientas para desarrolladores del navegador permiten inspeccionar elementos, revisar estilos y encontrar algunos errores.</p>
+          <p>En Chrome o Edge puedes abrirlas con <kbd>F12</kbd> o <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>. No hace falta aprenderlo todo ahora; iremos conociéndolas poco a poco.</p>
+          <p class="note">Tranquilo: si no funciona a la primera, revisa el nombre, la ruta y las etiquetas. Cada error es una oportunidad de aprender algo nuevo.</p>
+        </div>
+        <div class="lesson">
+          <h2>No intentes memorizar todo</h2>
+          <p>Es mejor aprender unas pocas etiquetas y utilizarlas varias veces que intentar memorizar cien en un día. Con <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code> y <code>button</code> ya puedes empezar a crear. Programar se aprende escribiendo código, no solo leyéndolo.</p>
+        </div>
+      </section>
+    </main>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

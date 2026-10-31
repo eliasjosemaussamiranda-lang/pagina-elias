@@ -1,0 +1,115 @@
+.hero {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(2.2rem, 7vw, 5rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.hero-card::before {
+  position: absolute;
+  z-index: -1;
+  inset: -4px;
+  background:
+    linear-gradient(rgba(15, 24, 20, 0.78), rgba(15, 24, 20, 0.84)),
+    url("../imagenes/imgen.jpg") center / cover no-repeat;
+  content: "";
+  filter: blur(4px);
+}
+
+.hero-copy {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.card-html,
+.card-css,
+.card-javascript,
+.card-needs {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: transparent;
+  color: var(--text);
+}
+
+.card-html::before,
+.card-css::before,
+.card-javascript::before,
+.card-needs::before {
+  position: absolute;
+  z-index: -1;
+  inset: -2px;
+  content: "";
+  filter: blur(2px);
+}
+
+.card-html::before {
+  background:
+    linear-gradient(rgba(15, 24, 20, 0.38), rgba(15, 24, 20, 0.48)),
+    url("../imagenes/HTML5.jpg") center / cover no-repeat;
+}
+
+.card-css::before {
+  background:
+    linear-gradient(rgba(15, 24, 20, 0.38), rgba(15, 24, 20, 0.48)),
+    url("../imagenes/CSS.webp") center / cover no-repeat;
+}
+
+.card-javascript::before {
+  background:
+    linear-gradient(rgba(15, 24, 20, 0.38), rgba(15, 24, 20, 0.48)),
+    url("../imagenes/Javascript-shield.svg") center / cover no-repeat;
+}
+
+.card-html::before,
+.card-css::before,
+.card-javascript::before {
+  background-size: auto, contain;
+  background-repeat: repeat, no-repeat;
+}
+
+.card-needs::before {
+  background:
+    linear-gradient(rgba(15, 24, 20, 0.38), rgba(15, 24, 20, 0.48)),
+    url("../imagenes/nesesario.jpg") center / cover no-repeat;
+}
+
+.card-html h3,
+.card-css h3,
+.card-javascript h3,
+.card-needs h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
+}
+
+.download-section {
+  margin-top: 0;
+}
+
+.download-section a {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 5px;
+  background: rgba(185, 246, 208, 0.25);
+  color: #d6f7e7;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.download-section a:hover,
+.download-section a:focus-visible {
+  background: #8cebb2;
+  text-decoration: underline;
+}

@@ -1,0 +1,81 @@
+button {
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #6ee7c8;
+    outline-offset: 3px;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 30;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(5, 9, 24, 0.86);
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.menu-box {
+    width: min(420px, 100%);
+    padding: 28px 24px;
+    border: 1px solid #53628e;
+    border-radius: 16px;
+    background: rgba(15, 20, 39, 0.96);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+}
+
+.menu-box h2 {
+    margin-top: 0;
+    letter-spacing: 2px;
+}
+
+.menu-box p {
+    color: #c7d2f4;
+    line-height: 1.5;
+}
+
+.menu-box .instructions {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.menu-box button {
+    min-height: 46px;
+    padding: 10px 24px;
+    border: 1px solid #6ee7c8;
+    border-radius: 10px;
+    background: #176c69;
+    font-weight: bold;
+}
+
+@media (max-width: 420px) {
+    .overlay {
+        padding: 12px;
+    }
+
+    .menu-box {
+        padding: 20px 16px;
+    }
+
+    .menu-box .instructions {
+        margin: 12px 0;
+        font-size: 14px;
+    }
+}
